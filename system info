@@ -1,0 +1,32 @@
+echo "---------------------------------"
+echo "System Information Script"
+echo "---------------------------------"
+
+# Display the hostname
+echo "Hostname: $(hostname)"
+
+# Display the operating system
+echo "Operating System: $(cat /etc/redhat-release)"
+
+# Display the kernel version
+echo "Kernel Version: $(uname -r)"
+
+# Display the CPU information
+echo "CPU Information:"
+lscpu | grep "Model name"
+
+# Display the memory information
+echo "Memory Information:"
+free -h | grep "Mem"
+
+# Display the disk space information
+echo "Disk Space Information:"
+df -h | grep "/dev/"
+
+# Display the network information
+echo "Network Information:"
+ip a
+
+echo "---------------------------------"
+
+
